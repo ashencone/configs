@@ -4,6 +4,10 @@ Invoke-Expression (&starship init powershell)
 # Set environmental flag to indicate admin privilages
 if (([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {$Env:SHIPADMIN = $True}
 
+
+# Enable inline prediction
+Set-PSReadLineOption -PredictionSource History
+
 # Syntax highlighting
 Set-PSReadlineOption -Color @{
     "ContinuationPrompt" = "`e[90m"     # Bright black

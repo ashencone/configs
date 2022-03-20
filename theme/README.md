@@ -3,7 +3,7 @@
 
 ## Palette
 | Name | Preview | RGB |
-| --: | :-----: | :-- |
+| --: | :-----: | :-: |
 | Black | ![Black](https://via.placeholder.com/100x32.png/2C2A2E/2C2A2E) | `#2C2A2E` |
 | DarkGray | ![DarkGray](https://via.placeholder.com/100x32.png/403E41/403E41) | `#403E41` |
 | LightGray | ![LightGray](https://via.placeholder.com/100x32.png/727072/727072) | `#727072` |

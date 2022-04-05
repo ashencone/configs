@@ -1,0 +1,41 @@
+# Snazzy starship configuration
+
+[directory]
+format = "[$path]($style)[($read_only)]($read_only_style) "
+style = "bold fg:cyan"
+read_only = "⨯"
+read_only_style = "bold bg:red fg:black"
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[[$symbol $branch]($style)](inverted $style) "
+style = "bold bg:purple fg:black"
+symbol = ""
+
+[git_status]
+format = "([\b\b](bg:purple fg:black)\u001B\\[1;30m$all_status$ahead_behind\b\u001B\\[7m\u001B\\[0m )"
+conflicted = "\u001B\\[41m≠$count"
+stashed = "\u001B\\[46m≡$count"
+deleted = "\u001B\\[41m−$count"
+renamed = "\u001B\\[46m→$count"
+modified = "\u001B\\[44m*$count"
+staged = "\u001B\\[42m∙$count"
+untracked = "\u001B\\[43m*$count"
+ahead = "\u001B\\[42m⇡$count"
+behind = "\u001B\\[41m⇣$count"
+diverged = "\u001B\\[42m⇡$ahead_count\u001B\\[41m⇣$behind_count"
+
+[package]
+format = "[[$symbol $version]($style)](inverted $style) "
+style = "bold bg:cyan fg:black"
+symbol = "Ξ"
+
+[rust]
+format = "[[$symbol $version]($style)](inverted $style) "
+style = "bold bg:#FC9867 fg:black"
+symbol = "rust"
+
+[cmd_duration]
+format = "[[◯ $duration]($style)](inverted $style) "
+style = "bold bg:yellow fg:black"
+min_time = 1000

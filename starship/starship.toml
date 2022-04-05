@@ -1,0 +1,42 @@
+# Minimal starship configuration
+
+format = """\
+    $directory\
+    $git_branch\
+    $git_status\
+    $git_state\
+    $cmd_duration\
+    $line_break\
+    $character\
+"""
+
+[directory]
+format = "\u001B\\[36;1m($read_only\b\u001B\\[31m)$path\u001B\\[0m "
+read_only = "x"
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[$branch]($style)"
+style = "bright-black"
+
+[git_status]
+format = "$all_status$ahead_behind "
+conflicted = "[≠](bold red)"
+stashed = "[≡](bold cyan)"
+deleted = "[-](bold red)"
+renamed = "[≈](bold yellow)"
+modified = "[→](bold blue)"
+staged = "[●](bold green)"
+untracked = "[*](bold yellow)"
+ahead = "[⇡](bold green)"
+behind = "[⇣](bold red)"
+diverged = "[⇡](bold green)[⇣](bold red)"
+
+[git_state]
+format = "\\([$state( $progress_current/$progress_total)]($style)\\ )"
+style = "bright-black"
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "bold yellow"
+min_time = "1_000"

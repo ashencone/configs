@@ -1,6 +1,12 @@
 # Enable starship prompt
 Invoke-Expression (&starship init powershell)
 
+# Chocolatey Profile for tab-completions
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+    Import-Module "$ChocolateyProfile"
+}
+
 # Enable inline prediction
 Set-PSReadLineOption -PredictionSource History
 

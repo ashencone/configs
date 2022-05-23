@@ -39,4 +39,4 @@ style = "bright-black"
 [cmd_duration]
 format = "[$duration]($style)"
 style = "bold yellow"
-min_time = "1_000"
+min_time = 1_000

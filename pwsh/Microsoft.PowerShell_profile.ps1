@@ -1,14 +1,13 @@
-# Enable starship prompt
+### Powershell profile
+
+# Starship
 Invoke-Expression (&starship init powershell)
 
-# Chocolatey Profile for tab-completions
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-    Import-Module "$ChocolateyProfile"
-}
-
-# Enable inline prediction
+# Inline predictions
 Set-PSReadLineOption -PredictionSource History
+
+# Better tab-completion
+Set-PSReadlineKeyHandler -Chord Tab -Function MenuComplete
 
 # Syntax highlighting
 Set-PSReadlineOption -Color @{
@@ -21,11 +20,11 @@ Set-PSReadlineOption -Color @{
     "Keyword" = "`e[31m"                # Red
     "String" = "`e[33m"                 # Yellow
     "Operator" = "`e[31m"               # Red
-    "Variable" = "`e[37m"               # White
+    "Variable" = "`e[36m"               # Cyan
     "Command" = "`e[32m"                # Gneen
-    "Parameter" = "`e[37m"              # White
+    "Parameter" = "`e[34m"              # Red
     "Type" = "`e[36m"                   # Cyan
     "Number" = "`e[35m"                 # Magenta
-    "Member" = "`e[36m"                 # Cyan
+    "Member" = "`e[37m"                 # White
     "InlinePrediction" = "`e[90m"       # Bright black
 }

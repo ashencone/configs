@@ -7,7 +7,7 @@ Invoke-Expression (&starship init powershell)
 Set-PSReadLineOption -PredictionSource History
 
 # Better tab-completion
-Set-PSReadlineKeyHandler -Chord Tab -Function MenuComplete
+# Set-PSReadlineKeyHandler -Chord Tab -Function MenuComplete
 
 # Syntax highlighting
 Set-PSReadlineOption -Color @{
